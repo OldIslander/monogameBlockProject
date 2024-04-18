@@ -36,3 +36,4 @@ C:\Users\Sean G\source\repos\Block Game\obj\Debug\net6.0-windows\Block Game.pdb
 C:\Users\Sean G\source\repos\Block Game\obj\Debug\net6.0-windows\Block Game.genruntimeconfig.cache
 C:\Users\Sean G\source\repos\Block Game\obj\Debug\net6.0-windows\ref\Block Game.dll
 C:\Users\Sean G\source\repos\Block Game\bin\Debug\net6.0-windows\Content\ground.xnb
+C:\Users\Sean G\source\repos\Block Game\bin\Debug\net6.0-windows\Content\SmileyWalk.xnb

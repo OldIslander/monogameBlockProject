@@ -11,6 +11,7 @@ namespace Block_Game
         private Texture2D ground;
         private Texture2D groundCorner;
         private Texture2D groundEdge;
+        private AnimatedSprite animatedSprite;  
 
         public BlockGame()
         {
@@ -30,6 +31,9 @@ namespace Block_Game
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);;
             ground = Content.Load<Texture2D>("ground");
+            
+            Texture2D texture = Content.Load<Texture2D>("SmileyWalk");
+            animatedSprite = new AnimatedSprite(texture, 4, 4);
 
             // TODO: use this.Content to load your game content here
         }
@@ -42,6 +46,9 @@ namespace Block_Game
             // TODO: Add your update logic here
 
             base.Update(gameTime);
+            animatedSprite.Update();
+
+
         }
 
         protected override void Draw(GameTime gameTime)
@@ -60,8 +67,11 @@ namespace Block_Game
                 y+= ground.Height;
                 x = 0;
             }
+
             
             spriteBatch.End();
+
+            animatedSprite.Draw(spriteBatch, new Vector2(400, 200));
 
             base.Draw(gameTime);
         }
