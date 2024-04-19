@@ -4,10 +4,12 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/Sean G/source/repos/Block Game/Content/arrow.png</File>
     <File>C:/Users/Sean G/source/repos/Block Game/Content/ground.jpg</File>
     <File>C:/Users/Sean G/source/repos/Block Game/Content/SmileyWalk.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>

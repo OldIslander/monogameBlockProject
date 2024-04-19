@@ -11,7 +11,9 @@ namespace Block_Game
         private Texture2D ground;
         private Texture2D groundCorner;
         private Texture2D groundEdge;
-        private AnimatedSprite animatedSprite;  
+        private AnimatedSprite animatedSprite;
+        private Texture2D arrow;
+        private float angle = 0;
 
         public BlockGame()
         {
@@ -35,6 +37,8 @@ namespace Block_Game
             Texture2D texture = Content.Load<Texture2D>("SmileyWalk");
             animatedSprite = new AnimatedSprite(texture, 4, 4);
 
+            arrow = Content.Load<Texture2D>("arrow");
+
             // TODO: use this.Content to load your game content here
         }
 
@@ -47,8 +51,8 @@ namespace Block_Game
 
             base.Update(gameTime);
             animatedSprite.Update();
-
-
+           
+            angle += 0.01f;
         }
 
         protected override void Draw(GameTime gameTime)
@@ -68,7 +72,13 @@ namespace Block_Game
                 x = 0;
             }
 
-            
+            Vector2 location = new Vector2(400, 240);
+            Rectangle sourceRectangle = new Rectangle(0, 0, arrow.Width, arrow.Height);
+            Vector2 origin = new Vector2(arrow.Width / 2, arrow.Height);
+
+            spriteBatch.Draw(arrow, location, sourceRectangle, Color.White, angle, origin, 1.0f, SpriteEffects.None, 1);
+
+
             spriteBatch.End();
 
             animatedSprite.Draw(spriteBatch, new Vector2(400, 200));
