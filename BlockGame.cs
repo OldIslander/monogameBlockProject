@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 
 namespace Block_Game
 {
@@ -8,12 +9,10 @@ namespace Block_Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch spriteBatch;
-        private Texture2D ground;
-        private Texture2D groundCorner;
-        private Texture2D groundEdge;
-        private AnimatedSprite animatedSprite;
-        private Texture2D arrow;
-        private float angle = 0;
+
+        private AnimatedPlayer worker;
+
+        private int dir = 0;
 
         public BlockGame()
         {
@@ -31,15 +30,11 @@ namespace Block_Game
 
         protected override void LoadContent()
         {
-            spriteBatch = new SpriteBatch(GraphicsDevice);;
-            ground = Content.Load<Texture2D>("ground");
-            
-            Texture2D texture = Content.Load<Texture2D>("SmileyWalk");
-            animatedSprite = new AnimatedSprite(texture, 4, 4);
+            spriteBatch = new SpriteBatch(GraphicsDevice);
+            Texture2D texture = Content.Load<Texture2D>("worker_sprites");
+            worker = new AnimatedPlayer(texture);
 
-            arrow = Content.Load<Texture2D>("arrow");
-
-            // TODO: use this.Content to load your game content here
+    
         }
 
         protected override void Update(GameTime gameTime)
@@ -47,41 +42,45 @@ namespace Block_Game
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
+            else if (Keyboard.GetState().IsKeyDown(Keys.Down))
+            {
+                dir = 0;
+                worker.Update(true, dir);
+            }
+
+            else if (Keyboard.GetState().IsKeyDown(Keys.Left))
+            {
+                dir = 3;
+                worker.Update(true, dir);
+            }
+
+            else if (Keyboard.GetState().IsKeyDown(Keys.Up))
+            {
+                dir = 1;
+                worker.Update(true, dir);
+            }
+
+            else if (Keyboard.GetState().IsKeyDown(Keys.Right))
+            {
+                dir = 2;
+                worker.Update(true, dir);
+            }
+
+            else
+            {
+                worker.Update(false, dir);
+            }
 
             base.Update(gameTime);
-            animatedSprite.Update();
            
-            angle += 0.01f;
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
-            int x = 0;
-            int y = 0;
-            spriteBatch.Begin();
-            for(int i = 0; i< 12; i++)
-            {
-                for(int j = 0; j < 10; j++)
-                {
-                    spriteBatch.Draw(ground, new Vector2(x, y), Color.White);
-                    x += ground.Width;
-                }
-                y+= ground.Height;
-                x = 0;
-            }
+            GraphicsDevice.Clear(Color.Black);
 
-            Vector2 location = new Vector2(400, 240);
-            Rectangle sourceRectangle = new Rectangle(0, 0, arrow.Width, arrow.Height);
-            Vector2 origin = new Vector2(arrow.Width / 2, arrow.Height);
+            worker.Draw(spriteBatch);
 
-            spriteBatch.Draw(arrow, location, sourceRectangle, Color.White, angle, origin, 1.0f, SpriteEffects.None, 1);
-
-
-            spriteBatch.End();
-
-            animatedSprite.Draw(spriteBatch, new Vector2(400, 200));
 
             base.Draw(gameTime);
         }

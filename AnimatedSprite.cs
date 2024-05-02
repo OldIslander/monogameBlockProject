@@ -18,6 +18,7 @@ namespace Block_Game
         public int Columns { get; set; }
         private int currentFrame;
         private int totalFrames;
+        
 
         public AnimatedSprite(Texture2D texture, int rows, int columns)
         {
