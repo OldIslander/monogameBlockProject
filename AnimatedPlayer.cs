@@ -80,12 +80,13 @@ namespace Block_Game
                 if (blipBlop)
                 {
                     position += incrementor;
-                    cur += 2;
+                    cur += 1;
                     
                     if(cur == block)
                     { 
                         cur = 0;
                         moving = false;
+                        currentFrame = 0;
                     }
                 }
 
