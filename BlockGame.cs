@@ -14,6 +14,9 @@ namespace Block_Game
 
         private int dir = 0;
 
+        private bool moving = false;
+        
+
         public BlockGame()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -41,6 +44,8 @@ namespace Block_Game
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
+
+ 
 
             else if (Keyboard.GetState().IsKeyDown(Keys.Down))
             {
