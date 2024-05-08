@@ -42,3 +42,4 @@ C:\Users\Sean G\source\repos\Block Game\bin\Debug\net6.0-windows\Content\blue.xn
 C:\Users\Sean G\source\repos\Block Game\bin\Debug\net6.0-windows\Content\green.xnb
 C:\Users\Sean G\source\repos\Block Game\bin\Debug\net6.0-windows\Content\red.xnb
 C:\Users\Sean G\source\repos\Block Game\bin\Debug\net6.0-windows\Content\worker_sprites.xnb
+C:\Users\Sean G\source\repos\Block Game\bin\Debug\net6.0-windows\Content\water_sprites.xnb

@@ -10,9 +10,11 @@
     <File>C:/Users/Sean G/source/repos/Block Game/Content/ground.jpg</File>
     <File>C:/Users/Sean G/source/repos/Block Game/Content/red.png</File>
     <File>C:/Users/Sean G/source/repos/Block Game/Content/SmileyWalk.png</File>
+    <File>C:/Users/Sean G/source/repos/Block Game/Content/water_sprites.png</File>
     <File>C:/Users/Sean G/source/repos/Block Game/Content/worker_sprites.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

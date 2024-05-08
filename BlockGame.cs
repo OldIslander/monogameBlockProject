@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using SharpDX.Direct3D9;
 using System;
 
 namespace Block_Game
@@ -11,6 +12,7 @@ namespace Block_Game
         private SpriteBatch spriteBatch;
 
         private AnimatedPlayer worker;
+        private waterTile water;
 
         private int dir = 0;
 
@@ -34,8 +36,14 @@ namespace Block_Game
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            Texture2D texture = Content.Load<Texture2D>("worker_sprites");
-            worker = new AnimatedPlayer(texture);
+
+            Texture2D waterTexture = Content.Load<Texture2D>("water_sprites");
+            water = new waterTile(waterTexture, 16); 
+            
+            Texture2D workerTexture = Content.Load<Texture2D>("worker_sprites");
+            worker = new AnimatedPlayer(workerTexture);
+
+
 
     
         }
@@ -76,6 +84,8 @@ namespace Block_Game
                 worker.Update(false, dir);
             }
 
+            water.Update();
+
             base.Update(gameTime);
            
         }
@@ -83,8 +93,22 @@ namespace Block_Game
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.Black);
+            spriteBatch.Begin(SpriteSortMode.Deferred,null,Microsoft.Xna.Framework.Graphics.SamplerState.PointClamp, null,null,null,null);
 
+            Rectangle sourceRectangle = new Rectangle(32 * water.frame, 0, 16, 16);
+
+
+            for (int x = 0; x < 30; x++)
+            {
+                for (int y = 0; y < 20; y++)
+                {
+                    spriteBatch.Draw(water.waterTexture, new Rectangle((47 * x), (47 * y), 48, 48), sourceRectangle, Color.White);
+                }
+            }
             worker.Draw(spriteBatch);
+            
+
+            spriteBatch.End();
 
 
             base.Draw(gameTime);

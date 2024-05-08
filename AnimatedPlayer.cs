@@ -7,26 +7,26 @@ namespace Block_Game
     internal class AnimatedPlayer
     {
         private Texture2D Texture { get; set; }
-        private int height = 22;
-        private int width = 18;
+        private int height = 23;
+        private int width = 19;
         private int totalFrames = 4;
         private int currentFrame = 0;
         private int direction = 0; //stores the last direction walked in
         private int currentDelay = 0;
         private int delay = 8;
-        const int block = 18; //for movement
+        const int block = 48; //for movement
         int cur = 0; //Keeps track of how many pixels have been traversed in a move
         private int dirMul; //makes calculating when to stop moving easier
         private bool moving;
         private bool blipBlop = false;
 
-        private Vector2 position = new Vector2(240, 240);
+        private Vector2 position = new Vector2(108, 108);
         private Vector2 incrementor;
 
-        private Vector2 up = new Vector2(0, -2);
-        private Vector2 down = new Vector2(0, 2);
-        private Vector2 left = new Vector2(-2, 0);
-        private Vector2 right = new Vector2(2, 0);
+        private Vector2 up = new Vector2(0, -3);
+        private Vector2 down = new Vector2(0, 3);
+        private Vector2 left = new Vector2(-3, 0);
+        private Vector2 right = new Vector2(3, 0);
 
 
 
@@ -80,17 +80,22 @@ namespace Block_Game
                 if (blipBlop)
                 {
                     position += incrementor;
-                    cur += 1;
+                    cur += 3;
                     
                     if(cur == block)
                     { 
                         cur = 0;
                         moving = false;
-                        currentFrame = 0;
+                        
                     }
                 }
 
 
+            }
+
+            else
+            {
+                currentFrame = 0;
             }
            
         }
@@ -98,11 +103,11 @@ namespace Block_Game
         public void Draw(SpriteBatch spriteBatch)
         {
             Rectangle sourceRectangle = new Rectangle(width * currentFrame, height * direction, width, height);
-            Rectangle destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 54, 66);
+            Rectangle destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 57, 69);
 
-            spriteBatch.Begin();
+         
             spriteBatch.Draw(Texture, destinationRectangle, sourceRectangle, Color.White);
-            spriteBatch.End();
+          
         }
 
 
