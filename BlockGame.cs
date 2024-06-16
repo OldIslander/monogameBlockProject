@@ -29,6 +29,9 @@ namespace Block_Game
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            _graphics.PreferredBackBufferWidth = 1280;
+            _graphics.PreferredBackBufferHeight = 960;
+            _graphics.ApplyChanges();
 
             base.Initialize();
         }
@@ -38,7 +41,7 @@ namespace Block_Game
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             Texture2D waterTexture = Content.Load<Texture2D>("water_sprites");
-            water = new waterTile(waterTexture, 16); 
+            water = new waterTile(waterTexture, 24); 
             
             Texture2D workerTexture = Content.Load<Texture2D>("worker_sprites");
             worker = new AnimatedPlayer(workerTexture);
@@ -102,7 +105,7 @@ namespace Block_Game
             {
                 for (int y = 0; y < 20; y++)
                 {
-                    spriteBatch.Draw(water.waterTexture, new Rectangle((47 * x), (47 * y), 48, 48), sourceRectangle, Color.White);
+                    spriteBatch.Draw(water.waterTexture, new Rectangle((48 * x), (48 * y), 48, 48), sourceRectangle, Color.White);
                 }
             }
             worker.Draw(spriteBatch);

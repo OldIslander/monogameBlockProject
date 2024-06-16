@@ -6,4 +6,4 @@ Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Siz
 "C:/Users/Sean G/source/repos/Block Game/Content/red.png","C:/Users/Sean G/source/repos/Block Game/Content/bin/Windows/Content/red.xnb","TextureProcessor","Texture2DContent",13180,262229,0.0103681
 "C:/Users/Sean G/source/repos/Block Game/Content/SmileyWalk.png","C:/Users/Sean G/source/repos/Block Game/Content/bin/Windows/Content/SmileyWalk.xnb","TextureProcessor","Texture2DContent",40026,262229,0.1722555
 "C:/Users/Sean G/source/repos/Block Game/Content/water_sprites.png","C:/Users/Sean G/source/repos/Block Game/Content/bin/Windows/Content/water_sprites.xnb","TextureProcessor","Texture2DContent",413,13397,0.1611978
-"C:/Users/Sean G/source/repos/Block Game/Content/worker_sprites.png","C:/Users/Sean G/source/repos/Block Game/Content/bin/Windows/Content/worker_sprites.xnb","TextureProcessor","Texture2DContent",3659,260185,0.1757759
+"C:/Users/Sean G/source/repos/Block Game/Content/worker_sprites.png","C:/Users/Sean G/source/repos/Block Game/Content/bin/Windows/Content/worker_sprites.xnb","TextureProcessor","Texture2DContent",9127,864085,0.1644417

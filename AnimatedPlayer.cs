@@ -7,8 +7,8 @@ namespace Block_Game
     internal class AnimatedPlayer
     {
         private Texture2D Texture { get; set; }
-        private int height = 23;
-        private int width = 19;
+        private int height = 66;
+        private int width = 54;
         private int totalFrames = 4;
         private int currentFrame = 0;
         private int direction = 0; //stores the last direction walked in
@@ -16,11 +16,10 @@ namespace Block_Game
         private int delay = 8;
         const int block = 48; //for movement
         int cur = 0; //Keeps track of how many pixels have been traversed in a move
-        private int dirMul; //makes calculating when to stop moving easier
         private bool moving;
         private bool blipBlop = false;
 
-        private Vector2 position = new Vector2(108, 108);
+        private Vector2 position = new Vector2(96, 96);
         private Vector2 incrementor;
 
         private Vector2 up = new Vector2(0, -3);
@@ -103,7 +102,7 @@ namespace Block_Game
         public void Draw(SpriteBatch spriteBatch)
         {
             Rectangle sourceRectangle = new Rectangle(width * currentFrame, height * direction, width, height);
-            Rectangle destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 57, 69);
+            Rectangle destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 54, 66);
 
          
             spriteBatch.Draw(Texture, destinationRectangle, sourceRectangle, Color.White);
