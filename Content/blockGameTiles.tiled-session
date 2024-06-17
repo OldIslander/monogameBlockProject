@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "brushTiles.tsx",
+    "activeFile": "testLevel.tmx",
     "expandedProjectPaths": [
         "."
     ],
@@ -29,8 +29,8 @@
             "scale": 1.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 606,
-                "y": 411
+                "x": 600.6666666666666,
+                "y": 405.66666666666663
             }
         }
     },
@@ -42,13 +42,12 @@
     "map.width": 27,
     "openFiles": [
         "testLevel.tmx",
-        "brushTiles.tsx",
         "brushTiles.tsx"
     ],
     "project": "blockGameTiles.tiled-project",
     "recentFiles": [
-        "testLevel.tmx",
         "brushTiles.tsx",
+        "testLevel.tmx",
         "brushSprites.tsx",
         "brushTiles2.tsx",
         "groundTiles.tsx"

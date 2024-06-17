@@ -1,9 +1,14 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
 "C:/Users/Sean G/source/repos/Block Game/Content/arrow.png","C:/Users/Sean G/source/repos/Block Game/Content/bin/Windows/Content/arrow.xnb","TextureProcessor","Texture2DContent",2024,16085,0.1762277
 "C:/Users/Sean G/source/repos/Block Game/Content/blue.png","C:/Users/Sean G/source/repos/Block Game/Content/bin/Windows/Content/blue.xnb","TextureProcessor","Texture2DContent",13691,262229,0.1705032
+"C:/Users/Sean G/source/repos/Block Game/Content/brushSprites.png","C:/Users/Sean G/source/repos/Block Game/Content/bin/Windows/Content/brushSprites_0.xnb","TextureProcessor","Texture2DContent",4998,702085,0.1531244
+"C:/Users/Sean G/source/repos/Block Game/Content/brushTiles.tsx","C:/Users/Sean G/source/repos/Block Game/Content/bin/Windows/Content/brushTiles.xnb","TiledMapTilesetProcessor","TiledMapTilesetContentItem",298,136,0.1487214
 "C:/Users/Sean G/source/repos/Block Game/Content/green.png","C:/Users/Sean G/source/repos/Block Game/Content/bin/Windows/Content/green.xnb","TextureProcessor","Texture2DContent",10885,262229,0.009233
 "C:/Users/Sean G/source/repos/Block Game/Content/ground.jpg","C:/Users/Sean G/source/repos/Block Game/Content/bin/Windows/Content/ground.xnb","TextureProcessor","Texture2DContent",880,985,0.1689678
+"C:/Users/Sean G/source/repos/Block Game/Content/groundSprites.png","C:/Users/Sean G/source/repos/Block Game/Content/bin/Windows/Content/groundSprites_0.xnb","TextureProcessor","Texture2DContent",4067,1224085,0.0355095
+"C:/Users/Sean G/source/repos/Block Game/Content/groundTiles.tsx","C:/Users/Sean G/source/repos/Block Game/Content/bin/Windows/Content/groundTiles.xnb","TiledMapTilesetProcessor","TiledMapTilesetContentItem",242,137,0.0376012
 "C:/Users/Sean G/source/repos/Block Game/Content/red.png","C:/Users/Sean G/source/repos/Block Game/Content/bin/Windows/Content/red.xnb","TextureProcessor","Texture2DContent",13180,262229,0.0103681
 "C:/Users/Sean G/source/repos/Block Game/Content/SmileyWalk.png","C:/Users/Sean G/source/repos/Block Game/Content/bin/Windows/Content/SmileyWalk.xnb","TextureProcessor","Texture2DContent",40026,262229,0.1722555
+"C:/Users/Sean G/source/repos/Block Game/Content/testLevel.tmx","C:/Users/Sean G/source/repos/Block Game/Content/bin/Windows/Content/testLevel.xnb","TiledMapProcessor","TiledMapContentItem",2706,1008,0.175296
 "C:/Users/Sean G/source/repos/Block Game/Content/water_sprites.png","C:/Users/Sean G/source/repos/Block Game/Content/bin/Windows/Content/water_sprites.xnb","TextureProcessor","Texture2DContent",413,13397,0.1611978
 "C:/Users/Sean G/source/repos/Block Game/Content/worker_sprites.png","C:/Users/Sean G/source/repos/Block Game/Content/bin/Windows/Content/worker_sprites.xnb","TextureProcessor","Texture2DContent",9127,864085,0.1644417

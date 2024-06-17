@@ -1,0 +1,6 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/Sean G/source/repos/Block Game/Content/brushSprites.png","C:/Users/Sean G/source/repos/Block Game/Content/bin/Windows/brushSprites_0.xnb","TextureProcessor","Texture2DContent",4998,702085,0.1593072
+"C:/Users/Sean G/source/repos/Block Game/Content/brushTiles.tsx","C:/Users/Sean G/source/repos/Block Game/Content/bin/Windows/brushTiles.xnb","TiledMapTilesetProcessor","TiledMapTilesetContentItem",238,136,0.2110034
+"C:/Users/Sean G/source/repos/Block Game/Content/groundSprites.png","C:/Users/Sean G/source/repos/Block Game/Content/bin/Windows/groundSprites_0.xnb","TextureProcessor","Texture2DContent",4067,1224085,0.1662006
+"C:/Users/Sean G/source/repos/Block Game/Content/groundTiles.tsx","C:/Users/Sean G/source/repos/Block Game/Content/bin/Windows/groundTiles_0.xnb","TiledMapTilesetProcessor","TiledMapTilesetContentItem",242,137,0.2062646
+"C:/Users/Sean G/source/repos/Block Game/Content/testLevel.tmx","C:/Users/Sean G/source/repos/Block Game/Content/bin/Windows/testLevel.xnb","TiledMapProcessor","TiledMapContentItem",2680,1012,0.3133264

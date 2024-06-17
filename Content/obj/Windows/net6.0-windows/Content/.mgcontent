@@ -6,14 +6,20 @@
   <SourceFiles>
     <File>C:/Users/Sean G/source/repos/Block Game/Content/arrow.png</File>
     <File>C:/Users/Sean G/source/repos/Block Game/Content/blue.png</File>
+    <File>C:/Users/Sean G/source/repos/Block Game/Content/brushTiles.tsx</File>
     <File>C:/Users/Sean G/source/repos/Block Game/Content/green.png</File>
     <File>C:/Users/Sean G/source/repos/Block Game/Content/ground.jpg</File>
+    <File>C:/Users/Sean G/source/repos/Block Game/Content/groundTiles.tsx</File>
     <File>C:/Users/Sean G/source/repos/Block Game/Content/red.png</File>
     <File>C:/Users/Sean G/source/repos/Block Game/Content/SmileyWalk.png</File>
+    <File>C:/Users/Sean G/source/repos/Block Game/Content/testLevel.tmx</File>
     <File>C:/Users/Sean G/source/repos/Block Game/Content/water_sprites.png</File>
     <File>C:/Users/Sean G/source/repos/Block Game/Content/worker_sprites.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

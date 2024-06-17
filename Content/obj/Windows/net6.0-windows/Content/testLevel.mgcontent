@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>C:/Users/Sean G/source/repos/Block Game/Content/testLevel.tmx</SourceFile>
+  <SourceTime>2024-06-17T13:49:39.090534-04:00</SourceTime>
+  <DestFile>C:/Users/Sean G/source/repos/Block Game/Content/bin/Windows/Content/testLevel.xnb</DestFile>
+  <DestTime>2024-06-17T13:49:42.4736046-04:00</DestTime>
+  <Importer>TiledMapImporter</Importer>
+  <ImporterTime>2024-05-20T18:34:00-04:00</ImporterTime>
+  <Processor>TiledMapProcessor</Processor>
+  <ProcessorTime>2024-05-20T18:34:00-04:00</ProcessorTime>
+  <Dependencies />
+  <BuildAsset>
+    <string>C:/Users/Sean G/source/repos/Block Game/Content/bin/Windows/Content/groundTiles.xnb</string>
+    <string>C:/Users/Sean G/source/repos/Block Game/Content/bin/Windows/Content/brushTiles.xnb</string>
+  </BuildAsset>
+  <BuildOutput />
+</PipelineBuildEvent>

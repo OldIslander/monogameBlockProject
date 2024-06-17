@@ -19,7 +19,7 @@ namespace Block_Game
         private bool moving;
         private bool blipBlop = false;
 
-        private Vector2 position = new Vector2(96, 96);
+        private Vector2 position = new Vector2(100, 110);
         private Vector2 incrementor;
 
         private Vector2 up = new Vector2(0, -3);
@@ -101,11 +101,14 @@ namespace Block_Game
 
         public void Draw(SpriteBatch spriteBatch)
         {
+            spriteBatch.Begin(SpriteSortMode.Deferred, null, Microsoft.Xna.Framework.Graphics.SamplerState.PointClamp, null, null, null, null);
             Rectangle sourceRectangle = new Rectangle(width * currentFrame, height * direction, width, height);
             Rectangle destinationRectangle = new Rectangle((int)position.X, (int)position.Y, 54, 66);
 
          
             spriteBatch.Draw(Texture, destinationRectangle, sourceRectangle, Color.White);
+
+            spriteBatch.End();
           
         }
 

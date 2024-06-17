@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MonoGame.Extended.Tiled;
+using MonoGame.Extended.Tiled.Renderers;
 using SharpDX.Direct3D9;
 using System;
 
@@ -13,6 +15,9 @@ namespace Block_Game
 
         private AnimatedPlayer worker;
         private waterTile water;
+
+        TiledMap _tiledMap;
+        TiledMapRenderer _tiledMapRenderer;
 
         private int dir = 0;
 
@@ -40,6 +45,9 @@ namespace Block_Game
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            _tiledMap = Content.Load<TiledMap>("testLevel");
+            _tiledMapRenderer = new TiledMapRenderer(GraphicsDevice, _tiledMap);
+
             Texture2D waterTexture = Content.Load<Texture2D>("water_sprites");
             water = new waterTile(waterTexture, 24); 
             
@@ -53,6 +61,8 @@ namespace Block_Game
 
         protected override void Update(GameTime gameTime)
         {
+            
+
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
@@ -89,6 +99,8 @@ namespace Block_Game
 
             water.Update();
 
+            _tiledMapRenderer.Update(gameTime);
+
             base.Update(gameTime);
            
         }
@@ -96,6 +108,7 @@ namespace Block_Game
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.Black);
+            
             spriteBatch.Begin(SpriteSortMode.Deferred,null,Microsoft.Xna.Framework.Graphics.SamplerState.PointClamp, null,null,null,null);
 
             Rectangle sourceRectangle = new Rectangle(32 * water.frame, 0, 16, 16);
@@ -108,10 +121,18 @@ namespace Block_Game
                     spriteBatch.Draw(water.waterTexture, new Rectangle((48 * x), (48 * y), 48, 48), sourceRectangle, Color.White);
                 }
             }
-            worker.Draw(spriteBatch);
+
+
+            
             
 
+
             spriteBatch.End();
+
+            _tiledMapRenderer.Draw();
+           
+            worker.Draw(spriteBatch);
+
 
 
             base.Draw(gameTime);

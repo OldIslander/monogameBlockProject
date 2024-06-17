@@ -10,6 +10,7 @@
 
 #-------------------------------- References --------------------------------#
 
+/reference:..\..\..\..\.nuget\packages\monogame.extended.content.pipeline\3.9.0-prerelease.4\tools\MonoGame.Extended.Content.Pipeline.dll
 
 #---------------------------------- Content ---------------------------------#
 
@@ -37,6 +38,11 @@
 /processorParam:TextureFormat=Color
 /build:blue.png
 
+#begin brushTiles.tsx
+/importer:TiledMapTilesetImporter
+/processor:TiledMapTilesetProcessor
+/build:brushTiles.tsx
+
 #begin green.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -61,6 +67,11 @@
 /processorParam:TextureFormat=Color
 /build:ground.jpg
 
+#begin groundTiles.tsx
+/importer:TiledMapTilesetImporter
+/processor:TiledMapTilesetProcessor
+/build:groundTiles.tsx
+
 #begin red.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -84,6 +95,11 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:SmileyWalk.png
+
+#begin testLevel.tmx
+/importer:TiledMapImporter
+/processor:TiledMapProcessor
+/build:testLevel.tmx
 
 #begin water_sprites.png
 /importer:TextureImporter
